@@ -1,0 +1,195 @@
+{
+  "attentionBlocks": 2,
+  "attentionDims": 256,
+  "attentionHeads": 4,
+  "attentionPostprocessLayers": 1,
+  "attentionPreprocessLayers": 1,
+  "attentionRefinementFeedforward": 512,
+  "attentionThinkDims": 1024,
+  "checkpointDir": "checkpoints",
+  "checkpointInterval": 5,
+  "clipRange": 0.20000000298023224,
+  "collisionMeshesDir": "collision_meshes",
+  "continuousActionSize": 8,
+  "criticLR": 9.999999747378752e-05,
+  "criticLayerSizes": "1024, 1024, 1024",
+  "deterministic": true,
+  "entropyScale": 0.02500000037252903,
+  "gamma": 0.9929999709129333,
+  "lambda": 0.9750000238418579,
+  "maxOldVersions": 32,
+  "minibatchSize": 20000,
+  "numArenas": 1024,
+  "obsBuilder": "AdvancedObsPadded",
+  "playersPerTeam": 2,
+  "policyLR": 9.999999747378752e-05,
+  "policyLayerSizes": "1024, 1024, 1024",
+  "ppoEpochs": 2,
+  "renderMode": true,
+  "rewardClipRange": 10.0,
+  "rewards": [
+    {
+      "className": "GoalReward",
+      "teamSpirit": 0.0,
+      "weight": 150.0,
+      "zeroSum": false
+    },
+    {
+      "className": "TouchBallReward",
+      "teamSpirit": 0.0,
+      "weight": 3.200000047683716,
+      "zeroSum": true
+    },
+    {
+      "className": "GoalDirectedTouchSpeedReward",
+      "teamSpirit": 0.0,
+      "weight": 0.4000000059604645,
+      "zeroSum": true
+    },
+    {
+      "className": "VelocityPlayerToBallReward",
+      "teamSpirit": 0.0,
+      "weight": 0.2800000011920929,
+      "zeroSum": false
+    },
+    {
+      "className": "VelocityBallToGoalReward",
+      "teamSpirit": 0.0,
+      "weight": 5.0,
+      "zeroSum": false
+    },
+    {
+      "className": "Kickoff2v2SimpleReward",
+      "teamSpirit": 0.0,
+      "weight": 0.7200000286102295,
+      "zeroSum": false
+    },
+    {
+      "className": "MKHKickoffSpeedflipReward",
+      "teamSpirit": 0.0,
+      "weight": 0.11999999731779099,
+      "zeroSum": false
+    },
+    {
+      "className": "WavedashKickoff50Reward",
+      "teamSpirit": 0.0,
+      "weight": 0.07000000029802322,
+      "zeroSum": false
+    },
+    {
+      "className": "IsBallVelocityOnTargetReward",
+      "teamSpirit": 0.0,
+      "weight": 0.2800000011920929,
+      "zeroSum": false
+    },
+    {
+      "className": "PickupBoostReward",
+      "teamSpirit": 0.0,
+      "weight": 20.0,
+      "zeroSum": false
+    },
+    {
+      "className": "SaveBoostReward",
+      "teamSpirit": 0.0,
+      "weight": 0.20000000298023224,
+      "zeroSum": false
+    },
+    {
+      "className": "BoostSpendPenaltyReward",
+      "teamSpirit": 0.0,
+      "weight": 0.10000000149011612,
+      "zeroSum": false
+    },
+    {
+      "className": "FreeGoalEventPenaltyReward",
+      "teamSpirit": 0.0,
+      "weight": 0.41999998688697815,
+      "zeroSum": false
+    },
+    {
+      "className": "TeamSpacingReward",
+      "teamSpirit": 0.0,
+      "weight": 0.30000001192092896,
+      "zeroSum": false
+    },
+    {
+      "className": "TeammateBumpPenaltyReward",
+      "teamSpirit": 0.0,
+      "weight": 0.30000001192092896,
+      "zeroSum": false
+    },
+    {
+      "className": "StagedFlickReward",
+      "teamSpirit": 0.0,
+      "weight": 0.2199999988079071,
+      "zeroSum": false
+    },
+    {
+      "className": "WavedashRecoveryReward",
+      "teamSpirit": 0.0,
+      "weight": 0.11999999731779099,
+      "zeroSum": false
+    },
+    {
+      "className": "AerialTouchHeightReward",
+      "teamSpirit": 0.0,
+      "weight": 0.20000000298023224,
+      "zeroSum": true
+    },
+    {
+      "className": "AirDribbleReward",
+      "teamSpirit": 0.0,
+      "weight": 0.14000000059604645,
+      "zeroSum": false
+    }
+  ],
+  "sendMetrics": true,
+  "sharedHeadLayerSizes": "1024, 1024, 1024",
+  "standardizeObs": false,
+  "standardizeReturns": true,
+  "stepsPerIteration": 200000,
+  "tickSkip": 8,
+  "trainAgainstOldChance": 0.20000000298023224,
+  "trainAgainstOldVersions": true,
+  "transferBatchSize": 32768,
+  "transferContinuousActionMSEWeight": 5.0,
+  "transferContinuousActionNLLWeight": 1.0,
+  "transferContinuousActionTableLossWeight": 0.0,
+  "transferContinuousActionTableTopK": 0,
+  "transferContinuousAerialSampleWeight": 8.0,
+  "transferContinuousButtonBCELossWeight": 5.0,
+  "transferContinuousStdLossWeight": 0.5,
+  "transferContinuousTargetStd": 0.10000000149011612,
+  "transferEpochs": 5,
+  "transferLR": 9.999999747378752e-05,
+  "transferLearning": true,
+  "transferLossExponent": 1.0,
+  "transferLossScale": 500.0,
+  "transferMaxIterations": -1,
+  "transferOldAttentionBlocks": 2,
+  "transferOldAttentionDims": 256,
+  "transferOldAttentionHeads": 4,
+  "transferOldAttentionPostprocessLayers": 1,
+  "transferOldAttentionPreprocessLayers": 1,
+  "transferOldAttentionRefinementFeedforward": 0,
+  "transferOldAttentionThinkDims": 1024,
+  "transferOldContinuousActionSize": 8,
+  "transferOldContinuousPolicy": true,
+  "transferOldModelsPath": "checkpoints/28188091392",
+  "transferOldObsBuilder": "AdvancedObsPadded",
+  "transferOldPolicyLayerNorm": true,
+  "transferOldPolicyLayerSizes": "1024, 1024, 1024",
+  "transferOldPolicyOutputLayer": true,
+  "transferOldSharedHeadLayerSizes": "",
+  "transferOldUseAttentionHead": true,
+  "transferSaveOnMaxIterations": true,
+  "transferStudentCheckpointDir": "checkpoints_transfer",
+  "transferStudentRolloutProb": 0.5,
+  "transferStudentRolloutWarmupTimesteps": 5000000,
+  "transferUseKLDiv": true,
+  "tsPerVersion": 25000000,
+  "useAttentionHead": true,
+  "useCuda": true,
+  "varMax": 1.0,
+  "varMin": 0.10000000149011612
+}

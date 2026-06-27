@@ -1,0 +1,14 @@
+# Normalize source and documentation to LF in the repository.
+* text=auto eol=lf
+
+# Windows launchers stay CRLF for cmd.exe compatibility.
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Runtime/assets are binary.
+*.cmf binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.svg text eol=lf
+*.ttf binary
